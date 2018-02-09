@@ -1,7 +1,7 @@
 # Operating System-
 This repository contains my work from  Operating System Classes.
 
-There are six popular process scheduling algorithms which we are used very often −
+There are six popular process scheduling algorithms which are used very often −
 
 ## First-Come, First-Served (FCFS) Scheduling
 ## Shortest-Job-Next (SJN) Scheduling
