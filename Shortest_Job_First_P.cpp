@@ -4,7 +4,7 @@ using namespace std;
 
 int main(){
 int burst_time[10],arrival_time[10],temp_burst_time[10],i,n,smallest,count=0,time;
-double wait_time=0,turn_around_time=0,end;
+double avg_wait_time=0,avg_turn_around_time=0,end;
 cout<<"\nEnter the no. of processes--";						//reading the no. of processes
 cin>>n;
 for(i=0;i<n;i++){
@@ -24,14 +24,14 @@ for(time=0;count!=n;time++){
     if(burst_time[smallest]==0){						//if the process is completed
         count++;
         end = time +1;
-        wait_time = wait_time+end-arrival_time[smallest]-temp_burst_time[smallest];	//calculate wait time
-        turn_around_time = turn_around_time + end - arrival_time[smallest];		//calculate turn_around time
+       avg_wait_time += end-arrival_time[smallest]-temp_burst_time[smallest];	//calculate wait time
+        avg_turn_around_time += end - arrival_time[smallest];		//calculate turn_around time
 
     }
 }
 							
-cout<<"\n\nAverage Waiting Time:\t\n"<<avg_wait_time;					//displaying average wait time 
-cout<<"\n\nAverage turnaround Time:\t\n"<<avg_tat_time;					//displaying average turn around time
+cout<<"\n\nAverage Waiting Time:\t\n"<<avg_wait_time/n;					//displaying average wait time 
+cout<<"\n\nAverage turnaround Time:\t\n"<<avg_tat_time/n;					//displaying average turn around time
 
 return 0;
 
